@@ -1,0 +1,18 @@
+[
+    {
+        "img": "src/assets/images/1AliMENTE.svg",
+        "title": "Alímente"
+    },
+    {
+        "img": "bx bx-cart",
+        "title": "Autónomos en movimiento"
+    },
+    {
+        "img": "bx bx-dollar-circle",
+        "title": "Con sentido UAO"
+    },
+    {
+        "img": "bx bx-receipt",
+        "title": "Vida UAO"
+    }
+]

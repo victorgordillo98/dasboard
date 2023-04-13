@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html {width: 100%; height: 100%; margin: 0; padding: 0}
+        #ZipLforms {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0 auto;
+        }
+        #ZipLiframe {
+        flex-grow: 1;
+        border: none;
+        margin: 10px;
+        padding: 0;
+        }
+        @-ms-viewport{
+        width: device-width;
+        }
+       </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- THIS MUST GO IN THE RETAILER'S WEB PAGE IFRAME. -->
+    <div id="ZipLforms">
+        <iframe id="ZipLiframe" name="ZipLforms" src="">
+        </iframe></div>
+        <form action="https://trial.nationalpaymentcard.com/{merchant}/index.php" method="POST" target="ZipLforms" id="NPCAforms" style="display: none;">
+        <input type="hidden" name="EMC" value="xxxxxxxxxxxxxxxx">
+        <input type="hidden" name="EST" value="1">
+        <input type="hidden" name="iframe" value="enroll">
+        </form><!-- END OF RETAILER'S PAGE CODE -->
+        <script type="text/javascript"><br />
+            document.body.onload = function() {loadIframe()};<br />
+            function loadIframe() {<br />
+          document.getElementById("NPCAforms").submit();}<br />
+       </script>
+    </body>
+</html>
